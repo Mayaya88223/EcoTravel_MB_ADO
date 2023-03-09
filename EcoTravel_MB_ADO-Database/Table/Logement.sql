@@ -29,15 +29,15 @@
     [IdClient] INT NOT NULL, 
     [IdPhoto] INT NOT NULL, 
     [Date_Creation] DATETIME NOT NULL DEFAULT GETDATE(), 
-    [IdType] NCHAR(10) NULL, 
-    CONSTRAINT [PK_Logement] PRIMARY KEY ([idLogement]), 
+    CONSTRAINT [PK_Logement] PRIMARY KEY ([IdLogement]), 
     CONSTRAINT [FK_Logement_Client] FOREIGN KEY ([IdClient]) REFERENCES [Owner]([IdClient]),
     CONSTRAINT [CK_Logement_Nom] CHECK (LEN([Nom]) >= 3 ),
     CONSTRAINT [CK_Logement_prixNuit] CHECK ([Prix] >= 0),
     CONSTRAINT [CK_Logement_nbChambre] CHECK ([Nombre_Chambres] >= 1),
     CONSTRAINT [CK_Logement_nbPiece] CHECK ([Nombre_Pieces] >= 1),
     CONSTRAINT [CK_Logement_capacite] CHECK ([Capacity_NbreMaxPersonnes] >= 1),
-    CONSTRAINT [CK_Logement_Description] CHECK (LEN([Description_Courte]) < LEN([Description_Longue])),
+    CONSTRAINT [CK_Logement_Description] CHECK (LEN([Description_Courte]) < LEN([Description_Longue])), 
+    CONSTRAINT [FK_Logement_Type_Logement] FOREIGN KEY ([Type]) REFERENCES [Type_Logement]([Type]),
 )
 
 GO
