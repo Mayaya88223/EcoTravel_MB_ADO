@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EcoTravel_MB_ADO-Database", "EcoTravel_MB_ADO-Database\EcoTravel_MB_ADO-Database.sqlproj", "{467F7A28-51D6-453C-9787-2107C50A425B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoTravel_MB_AspMVC", "EcoTravel_MB_AspMVC\EcoTravel_MB_AspMVC.csproj", "{7408BBF3-EEDF-4142-8F64-52B15F3B9423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoTravel_MB-DAL", "EcoTravel_MB-DAL\EcoTravel_MB-DAL.csproj", "{C1D7BDC6-C6B7-48A3-AD68-344ED1A07A64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoTravel_MB-BLL", "EcoTravel_MB-BLL\EcoTravel_MB-BLL.csproj", "{A8675BEB-62B0-4E74-9D8B-AAB4FF9A74C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoTravel_MB-COMMON", "EcoTravel_MB-COMMON\EcoTravel_MB-COMMON.csproj", "{58334475-6F2B-456B-AF44-0EFBAC9401E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{467F7A28-51D6-453C-9787-2107C50A425B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467F7A28-51D6-453C-9787-2107C50A425B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467F7A28-51D6-453C-9787-2107C50A425B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{467F7A28-51D6-453C-9787-2107C50A425B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467F7A28-51D6-453C-9787-2107C50A425B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467F7A28-51D6-453C-9787-2107C50A425B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7408BBF3-EEDF-4142-8F64-52B15F3B9423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7408BBF3-EEDF-4142-8F64-52B15F3B9423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7408BBF3-EEDF-4142-8F64-52B15F3B9423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7408BBF3-EEDF-4142-8F64-52B15F3B9423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D7BDC6-C6B7-48A3-AD68-344ED1A07A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D7BDC6-C6B7-48A3-AD68-344ED1A07A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D7BDC6-C6B7-48A3-AD68-344ED1A07A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D7BDC6-C6B7-48A3-AD68-344ED1A07A64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8675BEB-62B0-4E74-9D8B-AAB4FF9A74C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8675BEB-62B0-4E74-9D8B-AAB4FF9A74C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8675BEB-62B0-4E74-9D8B-AAB4FF9A74C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8675BEB-62B0-4E74-9D8B-AAB4FF9A74C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58334475-6F2B-456B-AF44-0EFBAC9401E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58334475-6F2B-456B-AF44-0EFBAC9401E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58334475-6F2B-456B-AF44-0EFBAC9401E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58334475-6F2B-456B-AF44-0EFBAC9401E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2033C90-677D-4BF6-B9A6-B42BF1B0749C}
+	EndGlobalSection
+EndGlobal
