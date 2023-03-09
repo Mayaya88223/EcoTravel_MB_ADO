@@ -29,6 +29,7 @@
     [IdClient] INT NOT NULL, 
     [IdPhoto] INT NOT NULL, 
     [Date_Creation] DATETIME NOT NULL DEFAULT GETDATE(), 
+    [IdType] NCHAR(10) NULL, 
     CONSTRAINT [PK_Logement] PRIMARY KEY ([idLogement]), 
     CONSTRAINT [FK_Logement_Client] FOREIGN KEY ([IdClient]) REFERENCES [Owner]([IdClient]),
     CONSTRAINT [CK_Logement_Nom] CHECK (LEN([Nom]) >= 3 ),

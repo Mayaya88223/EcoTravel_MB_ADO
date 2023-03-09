@@ -56,17 +56,9 @@
     <Folder Include="Properties" />
     <Folder Include="View" />
     <Folder Include="StoredProcedures" />
+    <Folder Include="Table" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Logement.sql" />
-    <Build Include="Client.sql" />
-    <Build Include="Type_Logement.sql" />
-    <Build Include="Indisponibilite.sql" />
-    <Build Include="Reservation.sql" />
-    <Build Include="Avis.sql" />
-    <Build Include="Photo.sql" />
-    <Build Include="Owner.sql" />
-    <Build Include="Annulation.sql" />
     <Build Include="View\V_ReservationPays.sql" />
     <Build Include="View\V_LogementAvis.sql" />
     <Build Include="StoredProcedures\SP_ClientCheck.sql" />
@@ -74,8 +66,22 @@
     <Build Include="StoredProcedures\SP_Logement_Added.sql" />
     <Build Include="StoredProcedures\SP_Reservation_EnCours.sql" />
     <Build Include="StoredProcedures\SP_Logement_Dispo.sql" />
+    <Build Include="Table\Annulation.sql" />
+    <Build Include="Table\Avis.sql" />
+    <Build Include="Table\Client.sql" />
+    <Build Include="Table\Indisponibilite.sql" />
+    <Build Include="Table\Logement.sql" />
   </ItemGroup>
   <ItemGroup>
-    <RefactorLog Include="EcoTravel_MB_ADO-Database.refactorlog" />
+    <RefactorLog Include="Table\EcoTravel_MB_ADO-Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment_MB_EcoTravel.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Table\Owner.sql" />
+    <Build Include="Table\Photo.sql" />
+    <Build Include="Table\Type_Logement.sql" />
+    <Build Include="Table\Reservation.sql" />
   </ItemGroup>
 </Project>
