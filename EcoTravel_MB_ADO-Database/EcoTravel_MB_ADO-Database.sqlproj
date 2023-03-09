@@ -66,6 +66,7 @@
     <Build Include="Avis.sql" />
     <Build Include="Photo.sql" />
     <Build Include="Owner.sql" />
+    <Build Include="Annulation.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="EcoTravel_MB_ADO-Database.refactorlog" />

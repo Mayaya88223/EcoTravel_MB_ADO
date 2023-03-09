@@ -4,5 +4,6 @@
     [Notes] TINYINT NOT NULL, 
     [Commentaire] NVARCHAR(50) NULL, 
     [Categorie_User] NVARCHAR(50) NOT NULL, 
-    CONSTRAINT [PK_Avis] PRIMARY KEY ([IdAvis])  
+    CONSTRAINT [PK_Avis] PRIMARY KEY ([IdAvis]), 
+     
 )
