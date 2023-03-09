@@ -9,8 +9,7 @@
     <ProjectGuid>{467f7a28-51d6-453c-9787-2107c50a425b}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath />
     <RootNamespace>EcoTravel_MB_ADO_Database</RootNamespace>
     <AssemblyName>EcoTravel_MB_ADO_Database</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
@@ -48,7 +47,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
@@ -56,6 +54,7 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="View" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Logement.sql" />
@@ -67,6 +66,8 @@
     <Build Include="Photo.sql" />
     <Build Include="Owner.sql" />
     <Build Include="Annulation.sql" />
+    <Build Include="View\V_ReservationPays.sql" />
+    <Build Include="View\V_LogementAvis.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="EcoTravel_MB_ADO-Database.refactorlog" />
