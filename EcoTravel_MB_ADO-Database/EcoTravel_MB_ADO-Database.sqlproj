@@ -71,6 +71,8 @@
     <Build Include="Table\Client.sql" />
     <Build Include="Table\Indisponibilite.sql" />
     <Build Include="Table\Logement.sql" />
+    <Build Include="StoredProcedures\SP_Annulation_Add.sql" />
+    <Build Include="StoredProcedures\SP_Owner_Add.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Table\EcoTravel_MB_ADO-Database.refactorlog" />

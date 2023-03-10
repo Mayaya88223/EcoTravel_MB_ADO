@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcoTravel_MB_COMMON.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EcoTravel_MB_COMMON.Repositories
 {
-    interface ILogementRepository
+    public interface ILogementRepository<TEntity, TId> : IRepository<TEntity, TId> where TEntity : ILogement
     {
     }
 }

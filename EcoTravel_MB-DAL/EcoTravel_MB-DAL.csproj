@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapper\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EcoTravel_MB-COMMON\EcoTravel_MB-COMMON.csproj" />
   </ItemGroup>
 
 </Project>

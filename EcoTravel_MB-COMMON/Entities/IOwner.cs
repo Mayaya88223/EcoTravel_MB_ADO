@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EcoTravel_MB_COMMON.Entities
 {
-    interface IOwner
+    public interface IOwner: IClient
     {
     }
 }
