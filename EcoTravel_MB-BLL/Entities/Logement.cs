@@ -37,6 +37,6 @@ namespace EcoTravel_MB_BLL.Entities
         public int IdClient { get; set; }
         public int IdPhoto { get; set; }
         public DateTime Date_Creation { get; set; }
-
+        public object Reservation { get; internal set; }
     }
 }

@@ -148,5 +148,30 @@ namespace EcoTravel_MB_DAL.Services
                 }
             }
         }
+
+
+        public IEnumerable<Logement> GetByReservation(int IdLogement)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    {
+
+                        command.CommandText = "SELECT * FROM [Reservation] WHERE [IdLogement] = @Id";
+                        command.Parameters.AddWithValue("Id", IdLogement);
+                        connection.Open();
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                yield return reader.ToLogement();
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

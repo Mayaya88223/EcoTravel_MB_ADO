@@ -67,7 +67,7 @@ namespace EcoTravel_MB_DAL.Services
 
                     command.CommandText = @"INSERT INTO [Owner]([IdClient], [Nom], [Prénom], [Email], [Pays], [Telephone], [Password])
                                             OUTPUT [inserted].[IdClient]
-                                            VALUES (@Nom, @Prénom, @Email, @Pays, @Telephone, HASHBYTES('SHA2_512',@pass)"; 
+                                            VALUES (@Nom, @Prénom, @Email, @Pays, @Telephone, HASHBYTES('SHA2_512',@pass)";
                     connection.Open();
                     return (int)command.ExecuteScalar();
                 }
@@ -132,6 +132,30 @@ namespace EcoTravel_MB_DAL.Services
                     connection.Open();
                     object result = command.ExecuteScalar();
                     return (result is DBNull) ? null : (int?)result;
+                }
+            }
+        }
+
+        IEnumerable<Owner> IOwnerRepository<Owner, int>.GetByLogement(int IdLogement)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    {
+
+                        command.CommandText = "SELECT * FROM [Owner] WHERE [IdLogement] = @Id";
+                        command.Parameters.AddWithValue("Id", IdLogement);
+                        connection.Open();
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                yield return reader.ToOwner();
+                            }
+                        }
+                    }
                 }
             }
         }

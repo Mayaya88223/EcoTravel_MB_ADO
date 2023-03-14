@@ -9,5 +9,11 @@ namespace EcoTravel_MB_COMMON.Repositories
 {
     public interface ILogementRepository<TEntity, TId> : IRepository<TEntity, TId> where TEntity : ILogement
     {
+
+       
+        IEnumerable<TEntity> GetByReservation(int IdReservation);
+       
+
+
     }
 }

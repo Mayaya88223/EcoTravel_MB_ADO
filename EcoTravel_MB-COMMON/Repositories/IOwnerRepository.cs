@@ -10,5 +10,7 @@ namespace EcoTravel_MB_COMMON.Repositories
     public interface IOwnerRepository<TEntity, TId> : IRepository<TEntity, TId> where TEntity : IOwner
     {
         int? CheckPassword(string email, string password);
+
+        IEnumerable<TEntity> GetByLogement(int IdLogement);
     }
 }

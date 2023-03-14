@@ -71,7 +71,7 @@ namespace EcoTravel_MB_DAL.Services
                     command.Parameters.AddWithValue("Pays", entity.Pays);
                     command.Parameters.AddWithValue("Telephone", entity.Pays);
                     command.Parameters.AddWithValue("Password", entity.Password);
-                    
+
                     connection.Open();
                     return (int)command.ExecuteScalar();
                 }
@@ -139,5 +139,8 @@ namespace EcoTravel_MB_DAL.Services
                 }
             }
         }
+
+        
     }
 }
+

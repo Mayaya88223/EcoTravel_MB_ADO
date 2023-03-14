@@ -9,10 +9,10 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-INSERT INTO [Type_Logement]([Type]) 
-        VALUES  ('Appartement'),
-                ('Maison'),
-                ('Villa'),
-                ('Hotel')
+INSERT INTO [Type_Logement]([Type], [Description])
+        VALUES  ('Appartement', 'Appartement'),
+                ('Maison', 'Maison'),
+                ('Villa', 'Villa'),
+                ('Hotel', 'Hotel')
 
 GO

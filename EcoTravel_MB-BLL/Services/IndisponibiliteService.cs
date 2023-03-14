@@ -1,41 +1,39 @@
 ﻿using EcoTravel_MB_BLL.Entities;
-using DAL = EcoTravel_MB_DAL;
+using EcoTravel_MB_BLL.Mapper;
 using EcoTravel_MB_COMMON.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EcoTravel_MB_BLL.Mapper;
 
 namespace EcoTravel_MB_BLL.Services
 {
-    public class ClientService : IClientRepository<Client, int>
+    public class IndisponibiliteService : IIndisponibiliteRepository <Indisponibilite, int>
     {
-        private readonly IClientRepository<DAL.Entities.Client, int> _repository;
+        public readonly IIndisponibiliteRepository<EcoTravel_MB_DAL.Entities.Indisponibilite, int> _repository;
 
-        public ClientService(IClientRepository<DAL.Entities.Client, int> repository)
+        public IndisponibiliteService(IIndisponibiliteRepository<EcoTravel_MB_DAL.Entities.Indisponibilite, int> repository)
         {
             _repository = repository;
         }
 
-
-        public IEnumerable<Client> Get()
+        public IEnumerable<Indisponibilite> Get()
         {
             return _repository.Get().Select(e => e.ToBLL());
         }
 
-        public Client Get(int id)
+        public Indisponibilite Get(int id)
         {
             return _repository.Get(id).ToBLL();
         }
 
-        public int Insert(Client entity)
+        public int Insert(Indisponibilite entity)
         {
             return _repository.Insert(entity.ToDAL());
         }
 
-        public bool Update(int id, Client entity)
+        public bool Update(int id, Indisponibilite entity)
         {
             return _repository.Update(id, entity.ToDAL());
         }
@@ -44,10 +42,7 @@ namespace EcoTravel_MB_BLL.Services
         {
             return _repository.Delete(id);
         }
-
-        public int? CheckPassword(string email, string password)
-        {
-            return _repository.CheckPassword(email, password);
-        }
     }
+
+
 }

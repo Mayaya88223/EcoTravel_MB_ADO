@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[SP_ClientCheck]
 	@Email NVARCHAR(50),
-	@Password VARBINARY(64)
+	@Password NVARCHAR(50)
 AS
 	SELECT [IdClient]
 	FROM [Client] 

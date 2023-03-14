@@ -10,5 +10,8 @@ namespace EcoTravel_MB_COMMON.Repositories
     public interface IClientRepository<TEntity, TId> : IRepository<TEntity, TId> where TEntity : IClient
     {
         int? CheckPassword(string email, string password);
+
+       
+
     }
 }

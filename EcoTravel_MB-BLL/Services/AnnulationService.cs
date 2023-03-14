@@ -1,4 +1,4 @@
-﻿using DAL = EcoTravel_MB_DAL,
+﻿using DAL = EcoTravel_MB_DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EcoTravel_MB_COMMON.Repositories;
 using EcoTravel_MB_BLL.Entities;
+using EcoTravel_MB_BLL.Mapper;
 
 namespace EcoTravel_MB_BLL.Services
 {
