@@ -4,7 +4,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    SELECT [Reservation].[IdReservation], [Logement].[Nom], [Reservation].[Date_debut], [Reservation].[Date_fin]
+    SELECT [Reservation].[IdReservation], [Logement].[Nom], [Reservation].[Date_debut], [Reservation].[Date_fin], [Reservation].[Date_resa]
     FROM [Reservation]
     INNER JOIN [Logement] ON [Reservation].[IdLogement] = [Logement].[IdLogement]
     WHERE [Reservation].[IdClient] = @IdClient

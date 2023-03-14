@@ -2,7 +2,7 @@
 	@Email NVARCHAR(50),
 	@Password VARBINARY(64)
 AS
-	SELECT [idClient]
+	SELECT [IdClient]
 	FROM [Client] 
 	WHERE	[Email] = @email 
 		AND [Password] = HASHBYTES('SHA2_512',@Password)

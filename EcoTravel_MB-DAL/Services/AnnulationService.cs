@@ -1,5 +1,6 @@
 ﻿using EcoTravel_MB_COMMON.Repositories;
 using EcoTravel_MB_DAL.Entities;
+using EcoTravel_MB_DAL.Mapper;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;

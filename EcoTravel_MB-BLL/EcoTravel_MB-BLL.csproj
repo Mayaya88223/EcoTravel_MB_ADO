@@ -6,9 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Mapper\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\EcoTravel_MB-COMMON\EcoTravel_MB-COMMON.csproj" />
+    <ProjectReference Include="..\EcoTravel_MB-DAL\EcoTravel_MB-DAL.csproj" />
   </ItemGroup>
 
 </Project>

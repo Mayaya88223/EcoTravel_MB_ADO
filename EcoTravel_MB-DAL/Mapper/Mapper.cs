@@ -63,7 +63,6 @@ namespace EcoTravel_MB_DAL.Mapper
                 IdLogement = (int)record[nameof(Indisponibilite.IdLogement)]
 
             };
-
         }
 
 
@@ -85,9 +84,80 @@ namespace EcoTravel_MB_DAL.Mapper
                 Description_Longue = (string)record[nameof(Logement.Description_Longue)],
                 Nombre_Chambres = (int)record[nameof(Logement.Nombre_Chambres)],
                 Nombre_Pieces = (int)record[nameof(Logement.Nombre_Pieces)],
+                Capacity_NbreMaxPersonnes = (int)record[nameof(Logement.Capacity_NbreMaxPersonnes)],
+                Nbre_SDB = (int)record[nameof(Logement.Nbre_SDB)],
+                Nbre_WC = (int)record[nameof(Logement.Nbre_WC)],
+                Balcon = (bool)record[nameof(Logement.Balcon)],
+                Air_Conditionning = (bool)record[nameof(Logement.Air_Conditionning)],
+                Wifi = (bool)record[nameof(Logement.Wifi)],
+                Mini_Bar = (bool)record[nameof(Logement.Wifi)],
+                Animaux_accepted = (bool)record[nameof(Logement.Animaux_accepted)],
+                Piscine = (bool)record[nameof(Logement.Piscine)],
+                Voiturier = (bool)record[nameof(Logement.Voiturier)],
+                Room_Service = (bool)record[nameof(Logement.Room_Service)],
+                Type = (string)record[nameof(Logement.Type)],
+                IdClient = (int)record[nameof(Logement.Nbre_WC)],
+                Date_Creation = (DateTime)record[nameof(Logement.Date_Creation)]
 
             };
+        }
 
+        public static Owner ToOwner(this IDataRecord record)
+        {
+            if (record is null) return null;
+            return new Owner()
+            {
+                IdClient = (int)record[nameof(Owner.IdClient)],
+                Nom = (string)record[nameof(Owner.Nom)],
+                Prénom = (string)record[nameof(Owner.Prénom)],
+                Email = (string)record[nameof(Owner.Email)],
+                Pays = (string)record[nameof(Owner.Pays)],
+                Telephone = (string)record[nameof(Owner.Telephone)],
+                Password = "********"
+            };
+        }
+
+        public static Photo ToPhoto(this IDataRecord record)
+        {
+            if (record is null) return null;
+            return new Photo()
+            {
+                IdPhoto = (int)record[nameof(Photo.IdPhoto)],
+                Description = (string)record[nameof(Photo.Description)],
+                Image = (string)record[nameof(Photo.Image)],
+                IdLogement = (int)record[nameof(Photo.IdLogement)]
+            };
+        }
+
+
+        public static Reservation ToReservation(this IDataRecord record)
+        {
+            if (record is null) return null;
+            return new Reservation()
+            {
+                IdReservation = (int)record[nameof(Reservation.IdReservation)],
+                Frais_Sejour = (float)record[nameof(Reservation.Frais_Sejour)],
+                Taxe_Sejour = (float)record[nameof(Reservation.Taxe_Sejour)],
+                Assurance_annulation = (bool)record[nameof(Reservation.Assurance_annulation)],
+                IdAvis = (int)record[nameof(Reservation.IdAvis)],
+                IdIndisponibilite = (int)record[nameof(Reservation.IdIndisponibilite)],
+                IdLogement = (int)record[nameof(Reservation.IdLogement)],
+                IdClient = (int)record[nameof(Reservation.IdClient)],
+                Date_debut = (DateTime)record[nameof(Reservation.Date_debut)],
+                Date_fin = (DateTime)record[nameof(Reservation.Date_fin)]
+            };
+        }
+
+
+        public static Type_Logement ToType_Logement(this IDataRecord record)
+        {
+            if (record is null) return null;
+            return new Type_Logement()
+            {
+                IdType = (int)record[nameof(Type_Logement.IdType)],
+                Description = (string)record[nameof(Type_Logement.Description)],
+                Type = (string)record[nameof(Type_Logement.Type)]
+            };
         }
 
 

@@ -1,5 +1,6 @@
 ﻿using EcoTravel_MB_COMMON.Repositories;
 using EcoTravel_MB_DAL.Entities;
+using EcoTravel_MB_DAL.Mapper;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace EcoTravel_MB_DAL.Services
                     {
                         while (reader.Read())
                         {
-                            yield return reader.ToType();
+                            yield return reader.ToType_Logement();
                         }
                     }
                 }
@@ -46,7 +47,7 @@ namespace EcoTravel_MB_DAL.Services
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.Read()) return reader.ToType();
+                        if (reader.Read()) return reader.ToType_Logement();
                         return null;
 
                     }

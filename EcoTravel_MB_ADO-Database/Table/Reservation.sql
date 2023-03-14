@@ -10,6 +10,7 @@
     [IdClient] INT NOT NULL,
     [Date_debut] DATETIME NOT NULL, 
     [Date_fin] DATETIME NOT NULL, 
+    [Date_resa] DATETIME NOT NULL, 
     CONSTRAINT [PK_Reservation] PRIMARY KEY ([IdReservation]), 
     
     CONSTRAINT [FK_Reservation_Avis] FOREIGN KEY ([IdAvis]) REFERENCES [Avis]([idAvis]),
