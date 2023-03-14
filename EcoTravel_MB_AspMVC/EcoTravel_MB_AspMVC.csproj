@@ -9,4 +9,14 @@
     <ProjectReference Include="..\EcoTravel_MB-COMMON\EcoTravel_MB-COMMON.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\LogementViewModel\" />
+    <Folder Include="Models\ReservationViewModel\" />
+    <Folder Include="Models\OwnerViewModel\" />
+    <Folder Include="Views\Client\" />
+    <Folder Include="Views\Logement\" />
+    <Folder Include="Views\Reservation\" />
+    <Folder Include="Views\Owner\" />
+  </ItemGroup>
+
 </Project>

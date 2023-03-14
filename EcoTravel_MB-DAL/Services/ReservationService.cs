@@ -122,6 +122,9 @@ namespace EcoTravel_MB_DAL.Services
             }
         }
 
-        
+        IEnumerable<Reservation> IReservationRepository<Reservation, int>.GetByReservation(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
